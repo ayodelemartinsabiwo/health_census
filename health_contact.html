@@ -68,7 +68,17 @@
   </form>
   <script>
     function thankyou(){
-        alert('Thank you for contacting us!')
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const condition = document.getElementById('condition').value;
+        const message = document.getElementById('message').value;
+
+
+        if(name === '' || email === '' || condition === '' || message === '') {
+            alert("Please fill in all the fields.");
+        } else {
+            alert('Thank you for contacting us!')
+        }
     }
   </script>
 </body>
